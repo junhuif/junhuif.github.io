@@ -1,0 +1,15 @@
+name: Greeting from Github Actions
+on: push
+
+jobs:
+  my-job:
+    name: My first Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Junhui
+          LAST_NAME: Feng
+        run: |
+          echo $MY_VAR $FIRST_NAME $LAST_NAME.
