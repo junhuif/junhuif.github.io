@@ -3,7 +3,7 @@ on: push
 
 jobs:
   my-job:
-    if: ${{ startsWith(github.ref, 'refs/heads/actions') }}
+    if: ${{ startsWith(github.ref, 'refs/heads/exp-actions') || startsWith(github.ref, 'refs/heads/actions') }}
     name: My first Job
     runs-on: ubuntu-latest
     steps:
